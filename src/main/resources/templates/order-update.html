@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Update order</title>
+</head>
+<body>
+<form action="#" th:action="@{/order-update}" th:object="${order}" method="post">
+    <label for="id">ID</label>
+    <input readonly type="number" th:field="*{id}" id="id" placeholder="ID">
+    <br/>
+    <label for="citySender">Sender's city</label>
+    <input type="text" th:field="*{citySender}" id="citySender" placeholder="Sender's city">
+    <br/>
+    <label for="addressSender">Sender's address</label>
+    <input type="text" th:field="*{addressSender}" id="addressSender" placeholder="Sender's address">
+    <br/>
+    <label for="cityRecipient">Recipient's city</label>
+    <input type="text" th:field="*{cityRecipient}" id="cityRecipient" placeholder="Recipient's city">
+    <br/>
+    <label for="addressRecipient">Recipient's address</label>
+    <input type="text" th:field="*{addressRecipient}" id="addressRecipient" placeholder="Recipient's address">
+    <br/>
+    <label for="weight">Weight</label>
+    <input type="number" th:field="*{weight}" id="weight" placeholder="Weight">
+    <br/>
+    <label for="pickupDate">Date of pickup</label>
+    <input type="text" th:field="*{pickupDate}" id="pickupDate" placeholder="дд.мм.гг">
+    <br/>
+    <input type="submit" value="Update order">
+</form>
+</body>
+</html>>
